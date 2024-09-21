@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="icon" type="imagem/png" href="../assets/icons/4434478.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Luan Gabriel" />
+        <meta name="copyright" content="Luan Gabriel 2023" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../assets/css/index.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
+        <title>Cadastro</title>
+    </head>
+    <body style="background-image:url(../assets/background.png)">  
+        <main>
+            <div class="container">
+                <form id="form-tela-cadastro" class="row g-3" novalidate>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <h2 style="color:#000000;">Cadastro!</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 offset-md-2">
+                            <input type="text" class="form-control" id="nome" name="nome"   placeholder="Nome completo" style="background: black;" minlength="2" required >
+                            <div class="invalid-feedback">
+                                Por favor, insira um nome válido.   
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            <input type="text" class="form-control" id="phone"  name="phone"  onkeypress="mask(this, mphone);" onblur="mask(this, mphone);" placeholder="Telefone" style="background: black;" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um telefone válido.
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-md-4 offset-md-2">
+                            
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" style="background: black; margin-top:15px;" required>
+                            <div class="invalid-feedback">
+                                Por favor, insira um e-mail válido.
+                            </div>
+                        </div>
+                        <div class="col-md-4 ">
+                            
+                            <input type="email" class="form-control" id="email2" placeholder="Confirme seu e-mail" style="background: black; margin-top:15px;" required>
+                            <div class="invalid-feedback">
+                                Por favor, confirme seu e-mail corretamente.
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="row">
+                        
+                        <div class="col-md-4 offset-md-2">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputSenha" name="inputSenha" placeholder="Senha" style="background: black; margin-top:15px;" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword" style="background: black; margin-top: 15px;">
+                                    <i class="bi-eye-slash-fill"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    Por favor, insira uma senha válida.
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="inputConfirma"  name ="inputConfirma"placeholder="Confirme sua senha" style="background: black; margin-top:15px;" required>
+                                <button class="btn btn-outline-secondary" type="button" id="togglePassword2" style="background: black; margin-top: 15px; border-color: #ff3a5e !important;
+                                color: #d8d8d8 !important;">
+                                    <i class="bi-eye-slash-fill"></i>
+                                </button>
+                                <div class="invalid-feedback">
+                                    As senhas não coincidem.
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 offset-md-4">
+                            <section id="MudaCor">
+                                <input type="submit" value="Cadastre-se" class="btn btn-primary">
+                            </section>
+                            <div class="error-message" id="loginErrorMessage"></div>
+                        </div>
+                    </div>
+                </form>
+                <form action="/login" method="GET" id="voltarRedireciona">
+                    <div class="form-group">
+                        <div class="col-md-4 offset-md-4">
+                            <section id="MudaCorCadastro">
+                                
+                                <input type="submit" value="Voltar" class="btn btn-primary" style="margin-top: 15px;">
+                              
+                            </section>
+                        </div>
+                    </div>
+                 
+
+
+                        
+                    
+                </form>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+                crossorigin="anonymous">
+        </script>
+
+        <script>
+            function mask(o, f) {
+                setTimeout(function() {
+                var v = mphone(o.value);
+                if (v != o.value) {
+                o.value = v;
+                }
+            }, 1);
+            }
+
+            function mphone(v) {
+                var r = v.replace(/\D/g, "");
+                r = r.replace(/^0/, "");
+                if (r.length > 10) {
+                    r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+                } else if (r.length > 5) {
+                    r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+                } else if (r.length > 2) {
+                    r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+                } else {
+                    r = r.replace(/^(\d*)/, "($1");
+                }
+                return r;
+                }
+        </script>
+         <script>
+            const togglePassword = document.querySelector('#togglePassword');
+            const password = document.querySelector('#inputSenha');
+            const eyeIcon = document.querySelector('#togglePassword i');
+          
+            togglePassword.addEventListener('click', () => {
+              const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+              password.setAttribute('type', type);
+              eyeIcon.classList.toggle('bi-eye-slash-fill');
+              eyeIcon.classList.toggle('bi-eye-fill');
+            });
+          </script>
+           <script>
+            const togglePassword2 = document.querySelector('#togglePassword2');
+            const password2 = document.querySelector('#inputConfirma');
+            const eyeIcon2 = document.querySelector('#togglePassword2 i');
+          
+            togglePassword2.addEventListener('click', () => {
+              const type = password2.getAttribute('type') === 'password' ? 'text' : 'password';
+              password2.setAttribute('type', type);
+              eyeIcon2.classList.toggle('bi-eye-slash-fill');
+              eyeIcon2.classList.toggle('bi-eye-fill');
+            });
+          </script>
+        
+        
+          <script src="/socket.io/socket.io.js"></script>
+          <script src="cadastro.js" type="module"></script>
+          <script src="./sweetalert2/dist/sweetalert2.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script>
+            // Obtém o formulário pelo ID
+            const form = document.getElementById('form-tela-cadastro');
+        
+            // Adiciona um ouvinte de evento ao formulário para tratar a submissão
+            form.addEventListener('submit', function(event) {
+              // Verifica se o formulário é válido
+              if (!form.checkValidity()) {
+                event.preventDefault(); // Impede o envio do formulário se for inválido
+                event.stopPropagation(); // Impede a propagação do evento
+              }
+        
+              form.classList.add('was-validated'); // Adiciona a classe 'was-validated' para aplicar os estilos de validação do Bootstrap
+            }, false);
+          </script>
+
+<script>
+    // Obtém o formulário pelo ID
+    const form2 = document.getElementById('form-tela-cadastro');
+
+    // Adiciona um evento de envio ao formulário
+    form2.addEventListener('submit', function(event) {
+      // Verifica se o formulário é válido
+      if (!form2.checkValidity()) {
+        event.preventDefault(); // Impede o envio do formulário se for inválido
+        event.stopPropagation(); // Impede a propagação do evento
+      }
+
+      form2.classList.add('was-validated'); // Aplica a classe 'was-validated' para mostrar os estilos de validação
+
+      // Verifique os campos individuais e exiba as mensagens de erro personalizadas
+      if (form2.nome.value.length < 2) {
+        document.getElementById('nome').classList.add('is-invalid');
+      }
+      if (!validatePhone(form2.phone.value)) {
+        document.getElementById('phone').classList.add('is-invalid');
+      }
+      if (!validateEmail(form2.email.value)) {
+        document.getElementById('email').classList.add('is-invalid');
+      }
+      if (form2.email.value !== form2.email2.value) {
+        document.getElementById('email2').classList.add('is-invalid');
+      }
+      if (form2.inputSenha.value.length === 0) {
+        document.getElementById('inputSenha').classList.add('is-invalid');
+      }
+      if (form2.inputSenha.value !== form2.inputConfirma.value) {
+        document.getElementById('inputConfirma').classList.add('is-invalid');
+      }
+    });
+
+    // Remove a classe 'is-invalid' dos campos quando eles forem modificados
+    form2.addEventListener('input', function(event) {
+      event.target.classList.remove('is-invalid');
+    });
+
+    // Validação do telefone
+    function validatePhone(phone) {
+      const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+      return phoneRegex.test(phone);
+    }
+
+    // Validação do e-mail
+    function validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+
+    </body>
+
+</html>

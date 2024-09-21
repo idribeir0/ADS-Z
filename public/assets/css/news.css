@@ -1,0 +1,351 @@
+*{
+ 
+    box-sizing:border-box;
+    font-family:"Archivo"
+}
+
+
+
+
+ul,ol{
+    list-style:none;
+    margin:0;
+    padding:0
+}
+a{
+    text-decoration:none !important;
+}
+.splide2 a{
+    color:#040405 !important;
+}
+nav img{
+    max-width:75px;
+    max-height: 50px;
+    cursor: pointer;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin:0
+}
+
+h1{
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    display: block;
+}
+body{
+    font-family:"Archivo,Inter,sans-serif;";
+    background-color:#121214 !important;
+    overflow-x:hidden;
+    display:table;
+    table-layout: fixed;
+    padding-top: 101px;
+    height: 100%;
+}
+html{
+    scroll-behavior:smooth;
+    font-size:62.5%;
+    height: 100%;
+}
+
+header{
+    padding:0px 50px;
+    background:#040405;
+    backdrop-filter:blur(24px);
+    -webkit-backdrop-filter:blur(24px);
+    border-bottom:1px solid #1a1515;
+    z-index:999;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0
+}
+
+header .grid-layout nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    height:100px;
+    padding:0px 8px
+}
+
+header .grid-layout nav img{
+    width:150px
+}
+header .grid-layout nav .nav-list{
+    list-style:none;
+    display:flex
+}
+header .grid-layout nav .nav-list li{
+    margin-left:48px
+}
+@media screen and (max-width: 992px){
+    header .grid-layout nav .nav-list li{
+        margin-left:0px
+    }
+}
+header .grid-layout nav .nav-list li a{
+    color:#d8d8d8;
+    position:relative;
+    font-size:1.8rem
+}
+header .grid-layout nav .nav-list li a::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    transform:scaleX(0);
+    height:1px;
+    bottom:-7px;
+    left:0;
+    background:linear-gradient(270deg, #ff3a5e 0%, #17161d 100%);
+    transform-origin:bottom right;
+    transition:transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+}
+header .grid-layout nav .nav-list li a:hover::after{
+    transform:scaleX(1);
+    transform-origin:bottom left
+}
+header .grid-layout nav .nav-list li a:hover{
+    color:#fff
+}
+
+footer{ 
+    width: 100vw; 
+    height: 64px; 
+    display: flex; 
+    align-items: center;
+    border-top: 1px solid rgba(114, 114, 126, 0.2);
+    background-color: #040405;
+    padding: 16px 10px;
+    text-align: center;
+    }
+    footer div.wrapper {
+        width: 100%;
+        text-align: center; /* Centraliza todo o conteúdo dentro do wrapper */
+      }
+
+  footer p{
+    color:#d8d8d8;
+    font-size:1.8rem
+  }
+
+
+ /* Centralize a imagem horizontal e verticalmente */
+ 
+html ::-webkit-scrollbar {
+    width: 10px;
+  }
+  html ::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: rgba(114, 114, 126, 0.2);
+  }
+  html ::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+
+main{
+    height: 100% !important;
+    }
+.imagenzinhas{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+    margin: auto; 
+    transition: left 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.descricao,
+.preco {
+    font-size: 16px;
+    position: absolute;
+    padding: 5px;
+}
+
+.baseDados{
+    display: flex;
+    position: relative;
+    height: 300px;
+    left: 73%;
+    padding-right: 1px;
+    padding-left: 1px;
+    bottom: 450px;
+    max-width: 300px;
+    
+
+}
+
+.nome {
+    top:150px;
+    padding-top: 10px;
+    left: 87px;
+    padding-left: 5px;
+    position: absolute;
+    color: #d8d8d8;
+    
+}
+@media (max-width: 768px) {
+    .nome {
+        top: 50px;
+        padding-top: 5px;
+        left: 20px;
+        padding-left: 2px;
+        position: absolute;
+    }
+}
+
+.descricao {
+    top: 100%; /* Ajuste a coordenada vertical para evitar sobreposição */
+    right: 5%;
+    padding: 5px;
+}
+
+.preco {
+    top: 90%; 
+    right: 61%;
+    padding: 5px;
+    font-weight: 900;
+    color: #d8d8d8;
+}
+
+.splide{
+    top:75px;
+    padding-top: 15px;
+    padding: 10px 15px;
+    margin:0 auto;
+    max-width: 1240px;
+    right: 250px;
+}
+
+.logotipo{
+    padding: 5px;
+    width: 370px;
+}
+
+.botaoComprar:hover::after,.botaoCarrinho:hover::after{
+    opacity: 0.16;
+    overflow: hidden;
+
+}
+.botaoComprar::after,.botaoCarrinho::after{
+    transition: opacity 200ms ease 0s;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    
+}
+
+.botaoComprar::after,.botaoCarrinho::after{
+    content: "";
+    position: absolute;
+    inset: 0px
+}
+.botaoComprar{
+    
+    padding: 5px;
+    display: flex;
+    position: relative;
+    left: 75%;
+    padding: 0px 20px;
+    bottom: 450px;
+    max-width: 300px;
+    border-radius: 4px;
+    width: 100%;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(0, 116, 228);
+    color: rgb(245, 245, 245);
+    border-width: 0px;
+}
+
+
+.compra{
+    text-align: center;
+    color: rgb(245, 245, 245);
+}
+
+.botaoCarrinho{
+    
+    padding: 5px;
+    display: flex;
+    position: relative;
+    left: 75%;
+    padding: 0px 20px;
+    bottom: 445px;
+    max-width: 300px;
+    border-radius: 4px;
+    width: 100%;
+    height:50px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: rgb(11, 13, 15);
+    color: rgb(245, 245, 245);
+    border-width: 0px;
+}
+
+
+.carrinho{
+    text-align: center;
+    color: rgb(245, 245, 245);
+}
+
+.arrumaDesc{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(31,32,36,.97);
+    width: 900px;
+   
+    bottom: 300px;
+    left: 239px;
+    margin: 0;
+    position: relative;
+    padding: 24px;
+    border-radius: 3px;
+}
+
+.sinopse{
+    word-wrap: break-word;
+    font-size: 1.5rem;  
+    color: #b2b2b2;
+    fill: #b2b2b2;
+    padding: 24px 32px;
+    margin: 0;
+}
+
+
+.h2Div{
+    display: flex;
+    width: 500px;
+    overflow-x: auto;
+    padding-top: 15px;
+    bottom: 320px;
+    color: #d8d8d8;
+    margin: 0;
+    position: relative;
+    padding: 5px;
+    left: 570px;
+}
+
+.subtitulo{
+    display: flex;
+    position: relative;
+    margin-right: 10px;
+    font-size: 2.5rem !important;
+}
+
+h2{
+    font-size: 2.5rem !important;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+  }
