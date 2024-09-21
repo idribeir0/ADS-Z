@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="icon" type="imagem/png" href="../assets/icons/4434478.png"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Luan Gabriel" />
+        <meta name="copyright" content="Luan Gabriel 2023" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../assets/css/news.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+        <link rel="stylesheet" href="./splidejs/splide/dist/css/splide.min.css">
+       
+        
+
+        <title>Loja</title>
+
+    </head>
+    
+    <body>
+            <header>
+                <div class="grid-layout">
+                    <nav>
+                        <a href="../home/home.html">
+                            <img
+                                src="../assets/icons/luancode-logo-footer.svg"
+                                alt="Logo Luancode"
+                            />
+                        </a>
+                        <div class="mobile-menu">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                        <ul class="nav-list">
+                            <li><a href="../home/home.html">Ínicio</a></li>
+                            <li><a href="#s-games">Jogos</a></li>
+                            <li>
+                            <a href="#s-logout" id="btnLogout">Logout</a>
+                            
+
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            
+    <main>
+        <form action="/news" method="GET" id="form-pagina-jogo">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1>
+
+                
+                        <span class="nome" name="titulo">
+                        
+                        </span> 
+                    
+                    </h1>
+                </div>
+            </div>
+            
+            <div class="alinhaTudo">
+                <section class="splide" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                                <li class="splide__slide">
+                                    
+                                    <img src=""  name="img-game"alt="Imagem do jogo" class="imagenzinhas">
+                                        
+                                </li>
+                        </ul>
+                    </div>
+                </section>
+
+            
+                <div class="baseDados"> 
+                            <img src="logotlou2.png" class="logotipo"/>
+                
+                    <!--<span class="preco" name="preco">
+                                        
+                    </span>-->
+                
+                </div>
+
+                <button class="botaoComprar">
+                    <span class="compra">
+                        Compre agora    
+                    </span>
+                </button>
+
+                <button class="botaoCarrinho">
+                    <span class="carrinho">
+                        Adicione ao carrinho  
+                    </span>
+                </button>
+
+                <div class="h2Div">
+                    <h2 class="subtitulo">
+                        Informações do jogo
+                    </h2>
+                </div>
+                <div class="arrumaDesc">
+                    <span name="sinopse" class="sinopse">
+
+                    </span>
+                </div>
+            </div>
+            
+        
+        </form>
+    </main>
+
+    <footer id="rodape">
+        <div class="wrapper">
+
+            <p>&copy; Powered by Luan</p>
+        </div>
+    </footer>
+        
+   
+    </body>
+
+    <script>
+        document.addEventListener('imagens-prontas', function () {
+           
+            var splide = new Splide('.splide', {
+                type   : 'loop',
+                padding: '1rem',
+                autoplay:true,
+                interval: 3000,
+                gap:"1.5rem",
+                snap:true,
+                drag:"free",
+                pagination:false,
+                perMove:1,
+            });
+            splide.mount();
+
+            
+
+        });
+    </script>
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="news.js" type="module"></script>
+    <script src="./splidejs/splide/dist/js/splide.min.js"></script>
+    
+   
+
+</html>

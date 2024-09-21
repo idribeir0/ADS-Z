@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Archivo";
+}
+
+html, body {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+body {
+  font-family: "Archivo";
+  background-color: #040405;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+span{
+  color:#d8d8d8
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.error-input {
+  border: 1px solid red;
+}
+#MudaCor input{
+  background:#ff3a5e;
+  color:#fff;
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:all 0.4s ease;
+  font-size:18px;
+  width: 100% ;
+}
+#MudaCor input:hover{
+  padding:10px 20px;
+}
+
+a{
+  text-decoration: none !important;
+}
+a{
+  margin-top: auto;
+  color: #ff3a5e !important;
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 2;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+  
+  
+
+}
+a::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  transform:scaleX(0);
+  height:1px;
+  bottom:-7px;
+  left:0;
+  background:linear-gradient(270deg, #ff3a5e 0%, #17161d 100%);
+  transform-origin:bottom right;
+  transition:transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+}
+
+a:hover::after{
+  transform:scaleX(1);
+  transform-origin:bottom left
+}
+a::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  transform:scaleX(0);
+  height:1px;
+  bottom:-7px;
+  left:0;
+  transform-origin:bottom right;
+  transition:transform 0.5s cubic-bezier(0.86, 0, 0.07, 1)
+}
+
+a:hover::after{
+  transform:scaleX(1);
+  transform-origin:bottom left
+}
+
+#MudaCorCadastro input{
+  background: #666666;
+  color:#fff;
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  transition:all 0.4s ease;
+  font-size:18px;
+  width: 100% ;
+}
+
+#MudaCorCadastro input:hover{
+  padding:10px 20px;
+}
+
+input::placeholder {
+  color: #666666 !important;
+}
+
+input{
+  box-sizing: border-box;
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content:center;
+  margin-top:24px;
+  display:flex;
+  align-items:center;
+  border-top:1px solid rgba(114,114,126,0.2);
+  background-color: #040405;
+  }
+
+footer p{
+  color:#d8d8d8;
+  text-align:center;
+  font-size:1.8rem
+}
+
+h1{
+  color:#fff !important;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 28px;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+input{
+  color: white !important;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.input-group button {
+  transition: all 0.3s;
+}
+
+#togglePassword {
+  border-color: #ff3a5e;
+  color: #d8d8d8;
+  background-color: transparent;
+}
+
+#togglePassword:hover {
+  border-color: #ff3a5e;
+  color: #ff3a5e;
+  background-color: transparent;
+}
