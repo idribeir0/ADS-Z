@@ -203,7 +203,7 @@ def reagendar_consulta():
         return jsonify({"message": "Consulta reagendada com sucesso!"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
 
 @app.before_request
 def require_login():
