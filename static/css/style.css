@@ -1,0 +1,59 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('../img/background.png'); /* Caminho da imagem de fundo */
+    background-size: cover; /* Ajustar para cobrir toda a tela */
+    background-position: center; /* Centralizar a imagem */
+    background-repeat: no-repeat; /* Evitar repetição */
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do card */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Títulos */
+h2 {
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Botões principais */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Botões secundários */
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Input group (visibilidade de senha) */
+.input-group .btn {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.input-group .btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
