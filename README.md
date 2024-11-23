@@ -73,10 +73,11 @@ projeto-sistema-consultas/
 │   └── historico.html        # Página de histórico de consultas
 └── README.md                 # Documentação do projeto
 
-##🚀 Próximos Passos
+
+## 🚀 Próximos Passos
 Adicionar funcionalidades para exportar o histórico de consultas em formatos como PDF ou CSV.
 Implementar autenticação mais segura com hash de senhas.
 Melhorar a interface do usuário com recursos avançados de Bootstrap.
 
-##🤝 Contribuindo
+## 🤝 Contribuindo
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
