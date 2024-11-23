@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'  # Substitua por uma string única e segura
 
 # Configuração do banco de dados PostgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@hostname:5432/dbname'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:KOEtaMCAJSsUpZVwqZgTLGkmGokHEAIN@autorack.proxy.rlwy.net:35974/railway'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializar o banco de dados
