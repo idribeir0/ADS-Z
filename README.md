@@ -24,8 +24,8 @@ Este é um sistema básico para gerenciamento de consultas médicas, permitindo 
 
 1. **Clone o Repositório:**
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   cd nome-do-repositorio```
+   git clone https://github.com/idribeir0/ADS-Z.git
+   cd ADS-Z```
 2. **Crie e ative o ambiente virtual:**
  ```bash
    python -m venv venv
